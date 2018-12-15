@@ -43,7 +43,7 @@ namespace CG_Lab__5
             float y = (Real.Y - p.Y) / Real.Height * Screen.Height;
             return new Point((int)x, (int)y);
         }
-        public Vector R2S(Point p)
+        public Vector S2R(Point p)
         {
             float x = Real.X + p.X * Real.Width / Screen.Width;
             float y = Real.Y - p.Y * Real.Height / Screen.Height;
