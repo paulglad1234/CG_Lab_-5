@@ -34,6 +34,7 @@
             this.startGB = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
+            this.worldPanel = new System.Windows.Forms.Panel();
             this.startGB.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             // 
             // startGB
             // 
+            this.startGB.BackColor = System.Drawing.SystemColors.WindowText;
             this.startGB.Controls.Add(this.label1);
             this.startGB.Controls.Add(this.startButton);
             this.startGB.Location = new System.Drawing.Point(280, 167);
@@ -77,17 +79,33 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
+            // worldPanel
+            // 
+            this.worldPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.worldPanel.BackColor = System.Drawing.SystemColors.WindowText;
+            this.worldPanel.Location = new System.Drawing.Point(13, 13);
+            this.worldPanel.Name = "worldPanel";
+            this.worldPanel.Size = new System.Drawing.Size(775, 425);
+            this.worldPanel.TabIndex = 1;
+            this.worldPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.worldPanel_Paint);
+            // 
             // AnimationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.startGB);
+            this.Controls.Add(this.worldPanel);
             this.DoubleBuffered = true;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "AnimationForm";
             this.Text = "Не убейся";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.AnimationForm_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnimationForm_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AnimationForm_KeyUp);
             this.startGB.ResumeLayout(false);
             this.startGB.PerformLayout();
             this.ResumeLayout(false);
@@ -101,6 +119,7 @@
         private System.Windows.Forms.GroupBox startGB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Panel worldPanel;
     }
 }
 

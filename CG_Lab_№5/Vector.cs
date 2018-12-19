@@ -32,5 +32,9 @@ namespace CG_Lab__5
         {
             return new Vector(v1.X + v2.X, v1.Y + v2.Y);
         }
+        public float DistanceTo(Vector v)
+        {
+            return (float)Math.Sqrt((v.X - X) * (v.X - X) + (v.Y - Y) * (v.Y - Y));
+        }
     }
 }
